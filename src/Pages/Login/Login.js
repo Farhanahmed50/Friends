@@ -63,7 +63,7 @@ function Login() {
                         <input type="checkbox" className={styles.checkBox} />
                         <span className={[styles.fontStyle, styles.remember].join(" ")} >Remember Me</span>
                     </span>
-                    <span className={[styles.fontStyle, styles.forgot].join(" ")} >Forgot Password</span>
+                    <span className={[styles.fontStyle, styles.forgot].join(" ")} >Forgot Password?</span>
                 </div>
                 <br />
                 <input type="submit" className={styles.button} value="Log in" />
