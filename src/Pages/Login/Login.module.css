@@ -1,0 +1,76 @@
+.mainContainer {
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #BFCDE0;
+    padding-bottom: 25px;
+}
+
+
+.inputText {
+    padding: 7px 20px;
+    width: 220px;
+    margin-top: 30px;
+    border: 1px solid #BFCDE0;
+}
+
+.button {
+    color: white;
+    background-color: #40A9FF;
+    border: none;
+    padding: 7px 115px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.fontStyle {
+    font-size: 14px;
+}
+
+.rememberMeContainer {
+    margin-top: 10px;
+    width: 300px;
+    margin-left: 22px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.heading {
+    color: #474545;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.remember {
+    margin-left: 5px;
+}
+
+.checkBox {
+    margin-top: 0px;
+
+}
+
+.signUp {
+    font-size: 14px;
+    color: #40A9FF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.forgot {
+    color: #40A9FF;
+}
+
+.errorHandle {
+    font-size: 14px;
+    color: red;
+}
+
+.bottomText{
+    margin-bottom: 15px;
+    text-align: left;
+}
