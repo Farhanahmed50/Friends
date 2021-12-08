@@ -1,0 +1,28 @@
+.coPhoto {
+    margin: 0 auto;
+    border-radius: 8px;
+
+}
+
+.coSetting {
+    /* background-image: linear-gradient(to bottom, grey , #ffffff); */
+    background-color: #E8EBEF;
+    text-align: center;
+}
+
+.proPhoto {
+    height: 173px;
+    width: 173px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-left: 250px;
+    position: absolute;
+    top: 61%;
+}
+
+.profPhoto{
+    display: flex;
+    flex-direction: column-reverse;
+    
+}

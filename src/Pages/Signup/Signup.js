@@ -9,29 +9,44 @@ function Signup() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [errorHandle, setErrorHandle] = useState("");
     const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(name);
-        if (!name || !email || !password) {
-            setFieldError(true);
-        }
-        else {
-            setFieldError(false);
-            createUserWithEmailAndPassword(auth, email, password)
-                .then((user) => {
-                    console.log(user);
-                    updateProfile(auth.currentUser, {
-                        displayName: name
-                    })
-                    navigate("../");
+        // if (!name || !email || !password) {
+        //     setFieldError(true);
+        // }
+        // else {
+        setFieldError(false);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((user) => {
+                console.log(user);
+                updateProfile(auth.currentUser, {
+                    displayName: name
                 })
+                navigate("../");
+            })
+            .catch((error) => {
+                console.log(error.message)
+                setErrorHandle(error.message);
+                setFieldError(true);
+            })
 
-        }
+        // }
     }
 
     const Field = () => {
-        return (<span className={styles.required}>*All fields are required.</span>)
+        if (!name || !email || !password) {
+            return (
+                <span className={styles.required}>* All fields are required.</span>
+            )
+        }
+        if (errorHandle === "Firebase: Error (auth/invalid-email).") {
+            return (
+                <span className={styles.required}>* Invalid Email Address</span>
+            )
+        }
     }
     return (
         <div className={styles.container}>
@@ -45,8 +60,8 @@ function Signup() {
                 <br />
                 {fieldError && <Field />}
                 <div>
-                    <input type="checkbox" className={styles.checkBox} />
-                    <span className={[styles.fontStyle, styles.remember].join(" ")}>I have accept the <span className="font-style forgot">Terms & Conditions</span> </span>
+                    <input type="checkbox" id='checkBox' className={styles.checkBox} />
+                    <label for="checkBox" className={[styles.fontStyle, styles.remember].join(" ")}>I have accept the <span className="font-style forgot">Terms & Conditions</span> </label>
                 </div>
                 <br />
                 <input type="submit" className={styles.button} value="Sign Up" />

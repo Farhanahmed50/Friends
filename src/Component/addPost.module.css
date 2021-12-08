@@ -1,0 +1,45 @@
+.mainContainer{
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 160px;
+    box-shadow: 1px 1px 2px grey;
+    border-radius: 7px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.image{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.inputBar{
+    background-color: #F0F2F5;
+    border: none;
+    padding: 10px;
+    width: 400px;
+    height: 23px;
+    border-radius: 40px;
+    padding-left: 25px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+hr{
+    border-top: 1px solid #F0F2F5;
+}
+.postButton{
+    font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    background-color: #1A6ED8;
+    height: 35px;
+    color: #FFFFFF;
+    border-radius: 6px;
+}

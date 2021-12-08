@@ -2,10 +2,13 @@ import React from 'react';
 import { auth } from '../../Configurations/firebaseConfig'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import Navs from '../../Component/Navs';
+import AddPost from '../../Component/AddPost';
+import styles from './Home.module.css';
+import GetPosts from '../../Component/GetPosts';
 
 function Home() {
     const navigate = useNavigate();
-
     const handleLogout = () => {
         auth.signOut();
         navigate("/login");
@@ -44,10 +47,14 @@ function Home() {
             </>
         )
     };
+    console.log(auth.currentUser)
 
     return (
-        <div>
+        <div className={styles.mainContainer}>
+            <Navs />
             <CurrentUser />
+            <AddPost />
+            <GetPosts />
         </div>
     )
 }

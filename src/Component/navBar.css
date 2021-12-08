@@ -1,0 +1,47 @@
+.navItem{
+    font-size: 15px;
+    margin-left: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.navBar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 70px;
+    background-color: rgba(255, 255, 255, .5);
+    height: 60px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 4px grey;
+}
+
+.team-logo{
+    position: absolute;
+    top: 13px;
+    left: 45px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.profile{
+    border-radius: 50%;
+    background-color: grey;
+    height: 35px;
+    width: 35px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.logout{
+    margin-left: 30px;
+    background-color: #1A6ED8;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+
+}
